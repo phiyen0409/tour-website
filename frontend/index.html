@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phi Yến</title>
+    <link rel="stylesheet" href="./css/mycss/home.css">
+    <script src="js/plugins/jquery-3.4.1.min.js"></script>
+    <script src="js/plugins/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="container-full">
+        <div class="text-center row">
+            <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs">
+                <a href="#">
+                    <img src="./images/logo.png" alt="Logo" style="vertical-align: middle;" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 bot-mg-b">
+                <div class="mt-2 text-left offset-7 contact">
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <span>0981422422</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>142 Lý Thường Kiệt, Quận 5, thành phố Hồ Chí Minh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand bg-dark navbar-dark">
+            <!-- Links -->
+            <ul class="navbar-nav m-1 text-uppercase">
+                <li class="nav-item ml-2 mr-2">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown mr-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Du lịch
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Du lịch miền Bắc</a>
+                        <a class="dropdown-item" href="#">Du lịch miền Trung</a>
+                        <a class="dropdown-item" href="#">Du lịch miền Nam</a>
+                        <a class="dropdown-item" href="#">Du lịch miền Tây</a>
+                    </div>
+                </li>
+                <li class="nav-item mr-2">
+                    <a class="nav-link" href="#">Tin tức</a>
+                </li>
+                <li class="nav-item mr-2">
+                    <a class="nav-link" href="#">Tuyển dụng</a>
+                </li>
+                <li class="nav-item mr-2">
+                    <a class="nav-link" href="#">Về chúng tôi</a>
+                </li>
+                <li class="nav-item mr-2">
+                    <a class="nav-link" href="#">Liên hệ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="slide container-full" style="position: relative;">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="./images/home/carousel/ConDao.jpg" alt="ConDao">
+                    <div class=" carousel-caption">
+                        <h3>Côn Đảo</h3><br>
+                        <p>"Nếu muốn tìm một bãi biển yên bình, tránh xa sự xô bồ của du khách thì bãi Đất Thắm (Côn
+                            Đảo) là
+                            một gợi ý không tồi dành cho bạn. Trang Independent (Anh) cũng đã bầu chọn đây là một
+                            trong
+                            10
+                            bãi biển ở Đông Nam Á thân thiện với môi trường nhất, mọi thứ còn rất hoang sơ, chưa bị
+                            ảnh
+                            hưởng bởi sự quá tải du lịch"</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./images/home/carousel/HoiAn.jpg" alt="HoiAn">
+                    <div class=" carousel-caption">
+                        <h3>Hội An</h3><br>
+                        <p>"Phố cổ Hội An và Sapa được các độc giả Anh của trang web du lịch Rough Guides bình chọn
+                            là 2
+                            trong top 10 điểm đến hấp dẫn nhất Đông Nam Á năm 2018"</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./images/home/carousel/DaNang.jpg" alt="DaNang">
+                    <div class=" carousel-caption">
+                        <h3>Đà nẵng</h3><br>
+                        <p>"Cầu Vàng không chỉ tạo ra cơn sốt check-in trong giới trẻ Việt mà còn là một trong những
+                            địa
+                            điểm được nhắc đến nhiều nhất trên Instagram vào năm nay. Tạp chí Time của Mỹ nhận xét
+                            rằng
+                            Cầu
+                            Vàng là một trong 100 điểm đến tuyệt vời nhất thế giới vào năm 2018"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+
+
+
+    <main id="body-content">
+
+        <div class="container">
+            <!--introdution-->
+            <div class="introdution">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="intro-item">
+                            <div class="intro-img">
+                                <img src="images/home/introduction/service.png" alt="Dịch vụ tiêu chuẩn">
+                            </div>
+                            <div class="intro-content">
+                                <h5>Dịch vụ tiêu chuẩn</h4>
+                                    <div class="desc">Dịch Vụ Tiêu chuẩn, đảm bảo theo đúng thông tin yêu cầu</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="intro-item">
+                            <div class="intro-img">
+                                <img src="images/home/introduction/support.png" alt="Hậu đãi tuyệt vời">
+                            </div>
+                            <div class="intro-content">
+                                <h5>Tư vấn chuyên nghiệp</h4>
+                                    <div class="desc">Với đội ngũ tư ván viên giàu kinh nghiệm và nhiệt tình luôn sẵn
+                                        sàng 24/7</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="intro-item">
+                            <div class="intro-img">
+                                <img src="images/home/introduction/treatment.png" alt="Dịch vụ tiêu chuẩn">
+                            </div>
+                            <div class="intro-content">
+                                <h5>Hậu đãi tuyệt vời</h5>
+                                <div class="desc">Chính sách chăm sóc khách hàng tuyệt vời</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--introdution end-->
+            <div class="book-form">
+                <form action="#" method="post">
+                    <div class="row">
+                        <div class="col-md-3 form-time-w3layouts editContent">
+                            <label class="editContent"><span class="fa fa-user" aria-hidden="true"></span> Tên tour:
+                            </label>
+                            <input type="text" placeholder="Tên tour...">
+                        </div>
+                        <div class="col-md-3 form-date-w3-agileits editContent">
+                            <label class="editContent"><span class="fa fa-map-marker" aria-hidden="true"></span> Điểm
+                                đến:
+                            </label>
+                            <select class="form-control">
+                                <option>Đà Lạt</option>
+                                <option>Vũng Tàu</option>
+                                <option>Long An</option>
+                                <option>Phan Thiết</option>
+                                <option>Đà Nẵng</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 form-left-agileits-w3layouts editContent">
+                            <label class="editContent"><span class="fa fa-bus" aria-hidden="true"></span>Ngày khởi
+                                hành:</label>
+                            <div class="agileits_w3layouts_main_gridl">
+                                <input class="date has Datepicker" id="datepicker" name="date" type="date">
+                            </div>
+                        </div>
+                        <div class="col-md-3 form-left-agileits-submit editContent">
+                            <input type="submit" value="Tìm kiếm">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 text-center mt-3">
+                    <h3 class="home-title"><a>ĐIỂM ĐẾN YÊU THÍCH</a></h3>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mg-bot20">
+                    <div class="pos-relative">
+                        <a href="#" class="hvr-bounce-to-bottom">
+                            <img src=".\images\home\popular_place\VinhHaLong.jpg" alt="dd1"
+                                class="img-responsive dd-img">
+                            <div class="frame-diemden">
+                                <div class="diemden-ten text-center">Vịnh Hạ Long</div>
+                                <div class="diemden-like text-center">Đã có <span class="num-like">1,600<sup
+                                            class="k">+</sup></span>
+                                    lượt khách</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mg-bot20">
+                    <div class="pos-relative">
+                        <a href="#" class="hvr-bounce-to-bottom">
+                            <img src=".\images\home\popular_place\SaPa.jpg" alt="dd2" class="img-responsive dd-img">
+                            <div class="frame-diemden">
+                                <div class="diemden-ten text-center">Sapa</div>
+                                <div class="diemden-like text-center">Đã có <span class="num-like">1,200<sup
+                                            class="k">+</sup></span>
+                                    lượt khách</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mg-bot20">
+                    <div class="pos-relative">
+                        <a href="#" class="hvr-bounce-to-bottom">
+                            <img src=".\images\home\popular_place\DaNang.jpg" alt="dd3" class="img-responsive dd-img">
+                            <div class="frame-diemden">
+                                <div class="diemden-ten text-center">Đà Nẵng</div>
+                                <div class="diemden-like text-center">Đã có <span class="num-like">1,100<sup
+                                            class="k">+</sup></span>
+                                    lượt khách</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mg-bot20">
+                    <div class="pos-relative">
+                        <a href="#" class="hvr-bounce-to-bottom">
+                            <img src=".\images\home\popular_place\QuyNhon.jpg" alt="dd4" class="img-responsive dd-img">
+                            <div class="frame-diemden">
+                                <div class="diemden-ten text-center">Quy Nhơn</div>
+                                <div class="diemden-like text-center">Đã có <span class="num-like">1,900<sup
+                                            class="k">+</sup></span>
+                                    lượt khách</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div style="border-top: 1px dashed #ccc; padding-bottom: 15px; padding-top: 0px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--tours hot-->
+        <div class="container">
+            <div class="tours tours-hot mt-3">
+                <a href="">
+                    <h3 class="title text-center">Tour du lịch HOT</h3>
+                </a>
+                <div class="tours-wrapper">
+                    <div class="tour-item">
+                        <div class="tour-item-wrapper ani-box-shawdow">
+                            <div class="tour-header">
+                                <a href=""><img class="ani-img-zoom"
+                                        src="https://saigon-travel.com/wp-content/uploads/2019/01/ali-nuredini-1133841-unsplash-680x500.jpg"
+                                        alt=""></a>
+                                <div class="tour-tag">Leo núi</div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-title">
+                                    <h5><a href="">Leo nóc nhà Liên Xô đầy thử thách</a></h5>
+                                </div>
+                                <div class="tour-rate">
+                                    <span class="tour-star"><i class="fas fa-star yellow"></i><i
+                                            class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i></span>
+                                    <span class="tour-review">2 reviews</span>
+                                </div>
+                                <div class="tour-info">
+                                    <div class="tour-price">Giá từ 3.500.000 VNĐ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-wrapper ani-box-shawdow">
+                            <div class="tour-header">
+                                <a href=""><img class="ani-img-zoom"
+                                        src="https://saigon-travel.com/wp-content/uploads/2019/01/ali-nuredini-1133841-unsplash-680x500.jpg"
+                                        alt=""></a>
+                                <div class="tour-tag">Leo núi</div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-title">
+                                    <h5><a href="">Leo nóc nhà Liên Xô đầy thử thách</a></h5>
+                                </div>
+                                <div class="tour-rate">
+                                    <span class="tour-star"><i class="fas fa-star yellow"></i></i></span>
+                                    <span class="tour-review">2 reviews</span>
+                                </div>
+                                <div class="tour-info">
+
+                                    <div class="tour-price">Giá từ 3.500.000 VNĐ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-wrapper ani-box-shawdow">
+                            <div class="tour-header">
+                                <a href=""><img class="ani-img-zoom"
+                                        src="https://saigon-travel.com/wp-content/uploads/2019/01/ali-nuredini-1133841-unsplash-680x500.jpg"
+                                        alt=""></a>
+                                <div class="tour-tag">Leo núi</div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-title">
+                                    <h5><a href="">Leo nóc nhà Liên Xô đầy thử thách</a></h5>
+                                </div>
+                                <div class="tour-rate">
+                                    <span class="tour-star"></span>
+                                    <span class="tour-review">2 reviews</span>
+                                </div>
+                                <div class="tour-info">
+
+                                    <div class="tour-price">Giá từ 3.500.000 VNĐ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-wrapper ani-box-shawdow">
+                            <div class="tour-header">
+                                <a href=""><img class="ani-img-zoom"
+                                        src="https://saigon-travel.com/wp-content/uploads/2019/01/ali-nuredini-1133841-unsplash-680x500.jpg"
+                                        alt=""></a>
+                                <div class="tour-tag">Leo núi</div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-title">
+                                    <h5><a href="">Leo nóc nhà Liên Xô đầy thử thách</a></h5>
+                                </div>
+                                <div class="tour-rate">
+                                    <span class="tour-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i></span>
+                                    <span class="tour-review">2 reviews</span>
+                                </div>
+                                <div class="tour-info">
+
+                                    <div class="tour-price">Giá từ 3.500.000 VNĐ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-wrapper ani-box-shawdow">
+                            <div class="tour-header">
+                                <a href=""><img class="ani-img-zoom"
+                                        src="https://saigon-travel.com/wp-content/uploads/2019/01/ali-nuredini-1133841-unsplash-680x500.jpg"
+                                        alt=""></a>
+                                <div class="tour-tag">Leo núi</div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-title">
+                                    <h5><a href="">Leo nóc nhà Liên Xô đầy thử thách</a></h5>
+                                </div>
+                                <div class="tour-rate">
+                                    <span class="tour-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i></span>
+                                    <span class="tour-review">2 reviews</span>
+                                </div>
+                                <div class="tour-info">
+
+                                    <div class="tour-price">Giá từ 3.500.000 VNĐ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-wrapper ani-box-shawdow">
+                            <div class="tour-header">
+                                <a href=""><img class="ani-img-zoom"
+                                        src="https://saigon-travel.com/wp-content/uploads/2019/01/ali-nuredini-1133841-unsplash-680x500.jpg"
+                                        alt=""></a>
+                                <div class="tour-tag">Leo núi</div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-title">
+                                    <h5><a href="">Leo nóc nhà Liên Xô đầy thử thách</a></h5>
+                                </div>
+                                <div class="tour-rate">
+                                    <span class="tour-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i></span>
+                                    <span class="tour-review">2 reviews</span>
+                                </div>
+                                <div class="tour-info">
+                                    <div class="tour-price">Giá từ 3.500.000 VNĐ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-for-slide">
+                        <div class="btn-pre-slide">
+                            <i class="fas fa-chevron-circle-left"></i>
+                        </div>
+                        <div class="btn-next-slide">
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--tours hot end-->
+
+        <!--tours populer-->
+        <div class="container">
+            <div class="tours tours-popular mt-3">
+                <a href="">
+                    <h3 class="title text-center">Tour du lịch phổ biến</h3>
+                </a>
+                <div class="tours-wrapper">
+                    <div class="tour-item">
+                        <div class="tour-item-wrapper ani-box-shawdow">
+                            <div class="tour-header">
+                                <a href=""><img class="ani-img-zoom"
+                                        src="https://saigon-travel.com/wp-content/uploads/2019/01/ali-nuredini-1133841-unsplash-680x500.jpg"
+                                        alt=""></a>
+                                <div class="tour-tag">Leo núi</div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-title">
+                                    <h5><a href="">Leo nóc nhà Liên Xô đầy thử thách</a></h5>
+                                </div>
+                                <div class="tour-rate">
+                                    <span class="tour-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i></span>
+                                    <span class="tour-review">2 reviews</span>
+                                </div>
+                                <div class="tour-info">
+                                    <div class="tour-price">Giá từ 3.500.000 VNĐ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-wrapper ani-box-shawdow">
+                            <div class="tour-header">
+                                <a href=""><img class="ani-img-zoom"
+                                        src="https://saigon-travel.com/wp-content/uploads/2019/01/ali-nuredini-1133841-unsplash-680x500.jpg"
+                                        alt=""></a>
+                                <div class="tour-tag">Leo núi</div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-title">
+                                    <h5><a href="">Leo nóc nhà Liên Xô đầy thử thách</a></h5>
+                                </div>
+                                <div class="tour-rate">
+                                    <span class="tour-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i></span>
+                                    <span class="tour-review">2 reviews</span>
+                                </div>
+                                <div class="tour-info">
+
+                                    <div class="tour-price">Giá từ 3.500.000 VNĐ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-wrapper ani-box-shawdow">
+                            <div class="tour-header">
+                                <a href=""><img class="ani-img-zoom"
+                                        src="https://saigon-travel.com/wp-content/uploads/2019/01/ali-nuredini-1133841-unsplash-680x500.jpg"
+                                        alt=""></a>
+                                <div class="tour-tag">Leo núi</div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-title">
+                                    <h5><a href="">Leo nóc nhà Liên Xô đầy thử thách</a></h5>
+                                </div>
+                                <div class="tour-rate">
+                                    <span class="tour-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i></span>
+                                    <span class="tour-review">2 reviews</span>
+                                </div>
+                                <div class="tour-info">
+
+                                    <div class="tour-price">Giá từ 3.500.000 VNĐ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-wrapper ani-box-shawdow">
+                            <div class="tour-header">
+                                <a href=""><img class="ani-img-zoom"
+                                        src="https://saigon-travel.com/wp-content/uploads/2019/01/ali-nuredini-1133841-unsplash-680x500.jpg"
+                                        alt=""></a>
+                                <div class="tour-tag">Leo núi</div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-title">
+                                    <h5><a href="">Leo nóc nhà Liên Xô đầy thử thách</a></h5>
+                                </div>
+                                <div class="tour-rate">
+                                    <span class="tour-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i></span>
+                                    <span class="tour-review">2 reviews</span>
+                                </div>
+                                <div class="tour-info">
+
+                                    <div class="tour-price">Giá từ 3.500.000 VNĐ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-wrapper ani-box-shawdow">
+                            <div class="tour-header">
+                                <a href=""><img class="ani-img-zoom"
+                                        src="https://saigon-travel.com/wp-content/uploads/2019/01/ali-nuredini-1133841-unsplash-680x500.jpg"
+                                        alt=""></a>
+                                <div class="tour-tag">Leo núi</div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-title">
+                                    <h5><a href="">Leo nóc nhà Liên Xô đầy thử thách</a></h5>
+                                </div>
+                                <div class="tour-rate">
+                                    <span class="tour-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i></span>
+                                    <span class="tour-review">2 reviews</span>
+                                </div>
+                                <div class="tour-info">
+
+                                    <div class="tour-price">Giá từ 3.500.000 VNĐ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-wrapper ani-box-shawdow">
+                            <div class="tour-header">
+                                <a href=""><img class="ani-img-zoom"
+                                        src="https://saigon-travel.com/wp-content/uploads/2019/01/ali-nuredini-1133841-unsplash-680x500.jpg"
+                                        alt=""></a>
+                                <div class="tour-tag">Leo núi</div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-title">
+                                    <h5><a href="">Leo nóc nhà Liên Xô đầy thử thách</a></h5>
+                                </div>
+                                <div class="tour-rate">
+                                    <span class="tour-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i></span>
+                                    <span class="tour-review">2 reviews</span>
+                                </div>
+                                <div class="tour-info">
+
+                                    <div class="tour-price">Giá từ 3.500.000 VNĐ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-for-slide">
+                        <div class="btn-pre-slide">
+                            <i class="fas fa-chevron-circle-left"></i>
+                        </div>
+                        <div class="btn-next-slide">
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--tours popular end-->
+
+
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
