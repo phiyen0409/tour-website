@@ -55,6 +55,16 @@ body a:hover {
     background: #397D54;
 }
 
+/* .navbar .wrap {
+    position: relative;
+    z-index: 20;
+    top: 5px;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: left;
+} */
+
 /*--end navbar*/
 
 /*Carousel*/
@@ -287,7 +297,6 @@ body a:hover {
 }
 
 .tour-item-wrapper {
-    /* background-color: #2e2e2e; */
     background-color: #fff;
 }
 
@@ -316,10 +325,6 @@ body a:hover {
     color: #666666;
     font-size: 17px;
     font-weight: 700;
-}
-
-body a:hover {
-    color: #235D3A;
 }
 
 .tour-content {
