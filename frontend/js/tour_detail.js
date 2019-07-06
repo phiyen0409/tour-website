@@ -36,34 +36,58 @@ $(document).ready(function () {
         }
     });
 });
+
+$(document).ready(function () {
+    $('.nav-tabs').on('click', 'div', function () {
+        $('.nav-tabs div').removeClass('active');
+        $(this).addClass('active');
+    });
+});
+
 // $(document).ready(function () {
-//     $('.nav-tabs').on('click', 'div', function () {
+//     $('.nav-tabs div').bind('click', function (e) {
 //         $('.nav-tabs div').removeClass('active');
 //         $(this).addClass('active');
+//         e.preventDefault(); // prevent hard jump, the default behavior
+
+//         var target = $(this).find('a').attr("href"); // Set the target as variable
+
+//         // perform animated scrolling by getting top-position of target-element and set it as scroll target
+//         $('html, body').stop().animate({
+//             scrollTop: $(target).offset().top - 40
+//         }, 600, function () {
+//             location.hash = target; //attach the hash (#jumptarget) to the pageurl
+//         });
+
+//         return false;
 //     });
 // });
 
 $(document).ready(function () {
-    $('.nav-tabs div').bind('click', function (e) {
-        $('.nav-tabs div').removeClass('active');
-        $(this).addClass('active');
+    $('a[href^="#"]').bind('click', function (e) {
+
         e.preventDefault(); // prevent hard jump, the default behavior
 
-        var target = $(this).find('a').attr("href"); // Set the target as variable
+        var target = $(this).attr("href"); // Set the target as variable
+
+        console.log(target);
+        let position = $(target).offset().top - 44;
 
         // perform animated scrolling by getting top-position of target-element and set it as scroll target
-        $('html, body').stop().animate({
-            scrollTop: $(target).offset().top - 40
-        }, 600, function () {
-            location.hash = target; //attach the hash (#jumptarget) to the pageurl
-        });
-
+        // $('html, body').stop().animate({
+        //     scrollTop: position
+        // }, 600, function () {
+        //     location.hash = target; //attach the hash (#jumptarget) to the pageurl
+        //     console.log(position);
+        //     console.log($('html, body').scrollTop());
+        // });
+        $('html, body').scrollTop(position);
         return false;
     });
 });
 
 $(window).scroll(function () {
-    var scrollDistance = $(window).scrollTop() + 60;
+    var scrollDistance = $(window).scrollTop() + 50;
 
     // Show/hide menu on scroll
     //if (scrollDistance >= 850) {

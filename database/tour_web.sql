@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 02, 2019 lúc 08:22 AM
--- Phiên bản máy phục vụ: 10.1.37-MariaDB
--- Phiên bản PHP: 7.2.12
+-- Host: 127.0.0.1
+-- Generation Time: Jul 02, 2019 at 09:52 AM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,119 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `tour_web`
+-- Database: `tour_web`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `migrations`
+-- Table structure for table `anh`
+--
+
+CREATE TABLE `anhtour` (
+  `maanh` int(11) NOT NULL,
+  `matour` int(11) NOT NULL,
+  `tenanh` varchar(200) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `binhluan`
+--
+
+CREATE TABLE `binhluan` (
+  `mabinhluan` int(11) NOT NULL,
+  `nguoibinhluan` varchar(200) NOT NULL,
+  `email` varchar(320) NOT NULL,
+  `matour` int(11) NOT NULL,
+  `thoigian` datetime NOT NULL,
+  `noidung` text NOT NULL,
+  `sosao` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chitietdattour`
+--
+
+CREATE TABLE `vedattour` (
+  `mave` int(11) NOT NULL,
+  `ngaydat` datetime NOT NULL,
+  `makh` int(11) NOT NULL,
+  `malichtrinh` int(11) NOT NULL,
+  `ngaykhoihanh` datetime NOT NULL,
+  `songuoilon` int(11) NOT NULL,
+  `sotreem` int(11) NOT NULL,
+  `tonggiave` double NOT NULL,
+  `tinhtrang` tinyint(4) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chitiettour`
+--
+
+CREATE TABLE `chitiettour` (
+  `machitiettour` int(11) NOT NULL,
+  `tieude` varchar(200) NOT NULL,
+  `matour` int(11) NOT NULL,
+  `ngay` int NOT NULL,
+  `noidung` text NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `khachhang`
+--
+
+CREATE TABLE `khachhang` (
+  `makh` int(11) NOT NULL,
+  `tenkh` varchar(50) NOT NULL,
+  `gioitinh` tinyint(4) NOT NULL,
+  `ngaysinh` date NOT NULL,
+  `diachi` varchar(200) NOT NULL,
+  `sdt` varchar(15) NOT NULL,
+  `email` varchar(320) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lichtrinh`
+--
+
+CREATE TABLE `lichtrinh` (
+  `malichtrinh` int(11) NOT NULL,
+  `ngaydi` date NOT NULL,
+  `ngayve` date NOT NULL,
+  `gioxuatphat` time NOT NULL,
+  `songuoi` int(11) NOT NULL,
+  `chiphi` double,
+  `huongdanvien` int(11) NOT NULL,
+  `matour` int(11) NOT NULL,
+  `tinhtrang` tinyint(4) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -35,7 +141,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -45,7 +151,26 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `password_resets`
+-- Table structure for table `nhanvien`
+--
+
+CREATE TABLE `nhanvien` (
+  `manv` int(11) NOT NULL,
+  `tennv` varchar(50) NOT NULL,
+  `gioitinh` tinyint(4) NOT NULL,
+  `ngaysinh` date NOT NULL,
+  `diachi` varchar(200) NOT NULL,
+  `sdt` varchar(15) NOT NULL,
+  `email` varchar(320) NOT NULL,
+  `tinhtrang` tinyint(4) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -57,7 +182,56 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `phanquyen`
+--
+
+CREATE TABLE `phanquyen` (
+  `maphanquyen` int(11) NOT NULL,
+  `tenphanquyen` varchar(20) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tintuc`
+--
+
+CREATE TABLE `tintuc` (
+  `matintuc` int(11) NOT NULL,
+  `tentintuc` varchar(200) NOT NULL,
+  `noidungtintuc` text NOT NULL,
+  `ngaydang` datetime NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tour`
+--
+
+CREATE TABLE `tour` (
+  `matour` int(11) NOT NULL,
+  `tentour` varchar(200) NOT NULL,
+  `songay` int(11) NOT NULL,
+  `sodem` int(11) NOT NULL,
+  `diadiem` varchar(200) NOT NULL,
+  `gioithieu` text NOT NULL,
+  `giave` double NOT NULL,
+  `mavung` int(11) NOT NULL,
+  `socho` int(11) NOT NULL,
+  `tinhtrang` tinyint(4) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -71,44 +245,248 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+-- --------------------------------------------------------
+
 --
--- Chỉ mục cho các bảng đã đổ
+-- Table structure for table `vungmien`
+--
+
+CREATE TABLE `vungmien` (
+  `mavung` int(11) NOT NULL,
+  `tenvung` varchar(200) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `migrations`
+-- Indexes for table `anh`
+--
+ALTER TABLE `anhtour`
+  ADD PRIMARY KEY (`maanh`),
+  ADD KEY `fk_tour_anh` (`matour`);
+
+--
+-- Indexes for table `binhluan`
+--
+ALTER TABLE `binhluan`
+  ADD PRIMARY KEY (`mabinhluan`),
+  ADD KEY `fk_tour_binhluan` (`matour`);
+
+--
+-- Indexes for table `chitietdattour`
+--
+ALTER TABLE `vedattour`
+  ADD PRIMARY KEY (`mave`),
+  ADD KEY `fk_kh_dattour` (`makh`),
+  ADD KEY `fk_lichtrinh_dattour` (`malichtrinh`);
+
+--
+-- Indexes for table `chitiettour`
+--
+ALTER TABLE `chitiettour`
+  ADD PRIMARY KEY (`machitiettour`),
+  ADD KEY `fk_tour_chitiet` (`matour`);
+
+--
+-- Indexes for table `khachhang`
+--
+ALTER TABLE `khachhang`
+  ADD PRIMARY KEY (`makh`);
+
+--
+-- Indexes for table `lichtrinh`
+--
+ALTER TABLE `lichtrinh`
+  ADD PRIMARY KEY (`malichtrinh`),
+  ADD KEY `fk_tour_lichtrinh` (`matour`),
+  ADD KEY `fk_nhanvien_lichtrinh` (`huongdanvien`);
+
+--
+-- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `password_resets`
+-- Indexes for table `nhanvien`
+--
+ALTER TABLE `nhanvien`
+  ADD PRIMARY KEY (`manv`);
+
+--
+-- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `phanquyen`
+--
+ALTER TABLE `phanquyen`
+  ADD PRIMARY KEY (`maphanquyen`);
+
+--
+-- Indexes for table `tintuc`
+--
+ALTER TABLE `tintuc`
+  ADD PRIMARY KEY (`matintuc`);
+
+--
+-- Indexes for table `tour`
+--
+ALTER TABLE `tour`
+  ADD PRIMARY KEY (`matour`),
+  ADD KEY `fk_vung_tour` (`mavung`);
+
+--
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_username_unique` (`username`);
+  ADD UNIQUE KEY `users_username_unique` (`username`),
+  ADD KEY `fk_phanquyen_user` (`maphanquyen`),
+  ADD KEY `fk_nhanvien_user` (`manv`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- Indexes for table `vungmien`
+--
+ALTER TABLE `vungmien`
+  ADD PRIMARY KEY (`mavung`);
+
+--
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `migrations`
+-- AUTO_INCREMENT for table `anh`
+--
+ALTER TABLE `anhtour`
+  MODIFY `maanh` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `binhluan`
+--
+ALTER TABLE `binhluan`
+  MODIFY `mabinhluan` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `chitietdattour`
+--
+ALTER TABLE `vedattour`
+  MODIFY `mave` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `chitiettour`
+--
+ALTER TABLE `chitiettour`
+  MODIFY `machitiettour` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `khachhang`
+--
+ALTER TABLE `khachhang`
+  MODIFY `makh` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `lichtrinh`
+--
+ALTER TABLE `lichtrinh`
+  MODIFY `malichtrinh` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `users`
+-- AUTO_INCREMENT for table `nhanvien`
+--
+ALTER TABLE `nhanvien`
+  MODIFY `manv` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `phanquyen`
+--
+ALTER TABLE `phanquyen`
+  MODIFY `maphanquyen` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tintuc`
+--
+ALTER TABLE `tintuc`
+  MODIFY `matintuc` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tour`
+--
+ALTER TABLE `tour`
+  MODIFY `matour` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `vungmien`
+--
+ALTER TABLE `vungmien`
+  MODIFY `mavung` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `anh`
+--
+ALTER TABLE `anhtour`
+  ADD CONSTRAINT `fk_tour_anhtour` FOREIGN KEY (`matour`) REFERENCES `tour` (`matour`);
+
+--
+-- Constraints for table `binhluan`
+--
+ALTER TABLE `binhluan`
+  ADD CONSTRAINT `fk_tour_binhluan` FOREIGN KEY (`matour`) REFERENCES `tour` (`matour`);
+
+--
+-- Constraints for table `chitietdattour`
+--
+ALTER TABLE `vedattour`
+  ADD CONSTRAINT `fk_kh_dattour` FOREIGN KEY (`makh`) REFERENCES `khachhang` (`MaKH`),
+  ADD CONSTRAINT `fk_tour_dattour` FOREIGN KEY (`malichtrinh`) REFERENCES `lichtrinh` (`malichtrinh`);
+
+--
+-- Constraints for table `chitiettour`
+--
+ALTER TABLE `chitiettour`
+  ADD CONSTRAINT `fk_tour_chitiet` FOREIGN KEY (`matour`) REFERENCES `tour` (`matour`);
+
+--
+-- Constraints for table `lichtrinh`
+--
+ALTER TABLE `lichtrinh`
+  ADD CONSTRAINT `fk_nhanvien_lichtrinh` FOREIGN KEY (`huongdanvien`) REFERENCES `nhanvien` (`MaNV`),
+  ADD CONSTRAINT `fk_tour_lichtrinh` FOREIGN KEY (`matour`) REFERENCES `tour` (`matour`);
+
+--
+-- Constraints for table `tour`
+--
+ALTER TABLE `tour`
+  ADD CONSTRAINT `fk_vung_tour` FOREIGN KEY (`mavung`) REFERENCES `vungmien` (`MaVung`);
+
+--
+-- Constraints for table `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `fk_nhanvien_user` FOREIGN KEY (`manv`) REFERENCES `nhanvien` (`MaNV`),
+  ADD CONSTRAINT `fk_phanquyen_user` FOREIGN KEY (`maphanquyen`) REFERENCES `phanquyen` (`MaPhanQuyen`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
