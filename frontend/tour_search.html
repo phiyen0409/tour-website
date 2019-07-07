@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phi Yến</title>
+    <link rel="stylesheet" href="./css/mycss/tour_search.css">
+    <script src="js/plugins/jquery-3.4.1.min.js"></script>
+    <script src="js/plugins/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- <link href="http://allfont.net/allfont.css?fonts=open-sans-bold" rel="stylesheet" type="text/css" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- <script src="./js/tour_search.js"></script> -->
+</head>
+
+<body>
+    <header class="container-full">
+        <div class="text-center row">
+            <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs">
+                <a href="#">
+                    <img src="./images/logo.png" alt="Logo" style="vertical-align: middle;" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 bot-mg-b">
+                <div class="mt-2 text-left offset-7 contact">
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <span>0981422422</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>142 Lý Thường Kiệt, Quận 5, thành phố Hồ Chí Minh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-md navbar-expand-sm navbar-expand-lg navbar-expand-xl">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"
+                aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <!-- Links -->
+            <div class="wrap">
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="navbar-nav m-1 text-uppercase">
+                        <li class="nav-item ml-2 mr-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-home"></i>
+                            </a>
+                        </li>
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown mr-2">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                Du lịch
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Du lịch miền Bắc</a>
+                                <a class="dropdown-item" href="#">Du lịch miền Trung</a>
+                                <a class="dropdown-item" href="#">Du lịch miền Nam</a>
+                                <a class="dropdown-item" href="#">Du lịch miền Tây</a>
+                            </div>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="#">Tin tức</a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="#">Tuyển dụng</a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="#">Về chúng tôi</a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="#">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="body-content">
+        <div class="container">
+            <!-- <div class="main-content"> -->
+            <!-- <div class="search-infor">
+                <div class="search-title green-title item-title">
+                    <h5>Danh sách tour du lịch hạ long</h5>
+                </div>
+                <div class="place-information">
+                    Vịnh Hạ Long nơi rồng đáp xuống, là danh thắng quốc gia được xếp hạng từ năm 1962. Hạ Long có
+                    1.969 hòn đảo, lô nhô trên mặt biển, nổi tiếng nhất là các hòn Lư Hương, Gà Chọi, Cánh Buồm, Mâm
+                    Xôi, đảo Ngọc Vừng, Ti Tốp, Tuần Châu. Hạ Long như bức tranh thủy mặc khổng lồ, tuyệt đẹp, xứng
+                    đáng là biểu tượng du lịch Việt Nam.
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <div class="book-form">
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-md-3 form-date-w3-agileits editContent">
+                                    <label class="editContent"><span class="fa fa-map-marker green-title"
+                                            aria-hidden="true"></span> Điểm
+                                        đến:
+                                    </label>
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Đà Lạt</option>
+                                        <option>Vũng Tàu</option>
+                                        <option>Long An</option>
+                                        <option>Phan Thiết</option>
+                                        <option>Đà Nẵng</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 form-left-agileits-w3layouts editContent">
+                                    <label class="editContent"><span class="fa fa-bus green-title"
+                                            aria-hidden="true"></span>Khởi
+                                        hành:</label>
+                                    <div class="agileits_w3layouts_main_gridl">
+                                        <input class="date has Datepicker" id="datepicker" name="date" type="date">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 form-time-w3layouts editContent">
+                                    <label class="editContent"><span class="fa fa-user green-title"
+                                            aria-hidden="true"></span>
+                                        Giá tiền:
+                                    </label>
+                                    <!-- <input type="text" placeholder="Tên tour..."> -->
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Dưới 2000000đ</option>
+                                        <option>Từ 2000000đ - 6000000đ</option>
+                                        <option>Trên 6000000đ</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 form-left-agileits-submit editContent">
+                                    <input type="submit" value="Tìm kiếm">
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="list-tour-search">
+                        <div class="tour">
+                            <div class="tour-name green-title">
+                                TOUR ĐÀ LẠT TÌNH YÊU - 3N2D - KHỞI HÀNH THỨ 5 HÀNG TUẦN
+                            </div>
+                            <div class="row">
+                                <div class="tour-picture col-lg-3 col-md-3 col-sm-12">
+                                    <img src="https://www.tugo.com.vn/wp-content/uploads/quang-truong-lam-vien-119450.jpg"
+                                        alt="">
+                                </div>
+                                <div class="tour-infor col-lg-9 col-md-9 col-sm-12 row">
+                                    <div class="col-lg-7 col-md-7 col-sm-12">
+                                        <div class="row tour-time">
+                                            <div class="col-md-6 col-sm-6 col-xs-5">Khởi hành:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-7">19/06/2019</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">Nơi khởi hành:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6"> Hồ Chí Minh</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-5">Thời gian:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-7">3 ngày 2 đêm</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-5">Số chỗ còn nhận:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-7 green-title">3 chỗ
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-12 border-left">
+                                        <div class="tour-rate col-xs-12">
+                                            <div class="tour-star text-center">
+                                                <span><i class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="tour-review-average text-center">
+                                                <span class="rating"><span
+                                                        class="average"><strong>4</strong></span><strong>/<span
+                                                            class="best">5
+                                                        </span></strong>trong <span
+                                                        class="votes"><strong>373</strong></span>
+                                                    Đánh giá<span class="summary"></span></span>
+                                            </div>
+
+                                        </div>
+                                        <div class="tour-price-booking text-center">
+
+                                            <div class="tour-price">
+                                                <span class="green-title">13,690,000đ</span>
+                                            </div>
+                                            <div class="tour-booking">
+                                                <a href="#"
+                                                    class="text-center d-flex align-items-center justify-content-center">
+                                                    Chi tiết
+                                                </a>
+
+                                            </div>
+                                            <!-- <div class="col-5 tour-booking text-center">
+                                                        <a href="#"
+                                                            class="text-center d-flex align-items-center justify-content-center">
+                                                            Chi tiết
+                                                        </a>
+                                                    </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour">
+                            <div class="tour-name green-title">
+                                TOUR ĐÀ LẠT TÌNH YÊU - 3N2D - KHỞI HÀNH THỨ 5 HÀNG TUẦN
+                            </div>
+                            <div class="row">
+                                <div class="tour-picture col-lg-3 col-md-3 col-sm-12">
+                                    <img src="https://www.tugo.com.vn/wp-content/uploads/quang-truong-lam-vien-119450.jpg"
+                                        alt="">
+                                </div>
+                                <div class="tour-infor col-lg-9 col-md-9 col-sm-12 row">
+                                    <div class="col-lg-7 col-md-7 col-sm-12">
+                                        <div class="row tour-time">
+                                            <div class="col-md-6 col-sm-6 col-xs-5">Khởi hành:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-7">19/06/2019</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">Nơi khởi hành:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6"> Hồ Chí Minh</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-5">Thời gian:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-7">3 ngày 2 đêm</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-5">Số chỗ còn nhận:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-7 green-title">3 chỗ
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-12 border-left">
+                                        <div class="tour-rate col-xs-12">
+                                            <div class="tour-star text-center">
+                                                <span><i class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="tour-review-average text-center">
+                                                <span class="rating"><span
+                                                        class="average"><strong>4</strong></span><strong>/<span
+                                                            class="best">5
+                                                        </span></strong>trong <span
+                                                        class="votes"><strong>373</strong></span>
+                                                    Đánh giá<span class="summary"></span></span>
+                                            </div>
+
+                                        </div>
+                                        <div class="tour-price-booking text-center">
+
+                                            <div class="tour-price">
+                                                <span class="green-title">13,690,000đ</span>
+                                            </div>
+                                            <div class="tour-booking">
+                                                <a href="#"
+                                                    class="text-center d-flex align-items-center justify-content-center">
+                                                    Chi tiết
+                                                </a>
+
+                                            </div>
+                                            <!-- <div class="col-5 tour-booking text-center">
+                                                        <a href="#"
+                                                            class="text-center d-flex align-items-center justify-content-center">
+                                                            Chi tiết
+                                                        </a>
+                                                    </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour">
+                            <div class="tour-name green-title">
+                                TOUR ĐÀ LẠT TÌNH YÊU - 3N2D - KHỞI HÀNH THỨ 5 HÀNG TUẦN
+                            </div>
+                            <div class="row">
+                                <div class="tour-picture col-lg-3 col-md-3 col-sm-12">
+                                    <img src="https://www.tugo.com.vn/wp-content/uploads/quang-truong-lam-vien-119450.jpg"
+                                        alt="">
+                                </div>
+                                <div class="tour-infor col-lg-9 col-md-9 col-sm-12 row">
+                                    <div class="col-lg-7 col-md-7 col-sm-12">
+                                        <div class="row tour-time">
+                                            <div class="col-md-6 col-sm-6 col-xs-5">Khởi hành:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-7">19/06/2019</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">Nơi khởi hành:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6"> Hồ Chí Minh</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-5">Thời gian:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-7">3 ngày 2 đêm</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-5">Số chỗ còn nhận:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-7 green-title">3 chỗ
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-12 border-left">
+                                        <div class="tour-rate col-xs-12">
+                                            <div class="tour-star text-center">
+                                                <span><i class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="tour-review-average text-center">
+                                                <span class="rating"><span
+                                                        class="average"><strong>4</strong></span><strong>/<span
+                                                            class="best">5
+                                                        </span></strong>trong <span
+                                                        class="votes"><strong>373</strong></span>
+                                                    Đánh giá<span class="summary"></span></span>
+                                            </div>
+
+                                        </div>
+                                        <div class="tour-price-booking text-center">
+
+                                            <div class="tour-price">
+                                                <span class="green-title">13,690,000đ</span>
+                                            </div>
+                                            <div class="tour-booking">
+                                                <a href="#"
+                                                    class="text-center d-flex align-items-center justify-content-center">
+                                                    Chi tiết
+                                                </a>
+
+                                            </div>
+                                            <!-- <div class="col-5 tour-booking text-center">
+                                                        <a href="#"
+                                                            class="text-center d-flex align-items-center justify-content-center">
+                                                            Chi tiết
+                                                        </a>
+                                                    </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour">
+                            <div class="tour-name green-title">
+                                TOUR ĐÀ LẠT TÌNH YÊU - 3N2D - KHỞI HÀNH THỨ 5 HÀNG TUẦN
+                            </div>
+                            <div class="row">
+                                <div class="tour-picture col-lg-3 col-md-3 col-sm-12">
+                                    <img src="https://www.tugo.com.vn/wp-content/uploads/quang-truong-lam-vien-119450.jpg"
+                                        alt="">
+                                </div>
+                                <div class="tour-infor col-lg-9 col-md-9 col-sm-12 row">
+                                    <div class="col-lg-7 col-md-7 col-sm-12">
+                                        <div class="row tour-time">
+                                            <div class="col-md-6 col-sm-6 col-xs-5">Khởi hành:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-7">19/06/2019</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">Nơi khởi hành:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6"> Hồ Chí Minh</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-5">Thời gian:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-7">3 ngày 2 đêm</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-5">Số chỗ còn nhận:</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-7 green-title">3 chỗ
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-12 border-left">
+                                        <div class="tour-rate col-xs-12">
+                                            <div class="tour-star text-center">
+                                                <span><i class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star yellow-star"></i><i
+                                                        class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="tour-review-average text-center">
+                                                <span class="rating"><span
+                                                        class="average"><strong>4</strong></span><strong>/<span
+                                                            class="best">5
+                                                        </span></strong>trong <span
+                                                        class="votes"><strong>373</strong></span>
+                                                    Đánh giá<span class="summary"></span></span>
+                                            </div>
+
+                                        </div>
+                                        <div class="tour-price-booking text-center">
+
+                                            <div class="tour-price">
+                                                <span class="green-title">13,690,000đ</span>
+                                            </div>
+                                            <div class="tour-booking">
+                                                <a href="#"
+                                                    class="text-center d-flex align-items-center justify-content-center">
+                                                    Chi tiết
+                                                </a>
+
+                                            </div>
+                                            <!-- <div class="col-5 tour-booking text-center">
+                                                        <a href="#"
+                                                            class="text-center d-flex align-items-center justify-content-center">
+                                                            Chi tiết
+                                                        </a>
+                                                    </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 right-bar">
+
+                    <div class="news-bar">
+                        <div class="green-title item-title text-center border-bottom">
+                            Tin tức
+                        </div>
+                        <div class="list-news">
+                            <a href="#">Đừng bỏ qua 4 Lễ hội hấp dẫn khi du lịch Hàn Quốc Hè này</a><br>
+                            <a href="#">Mẹo mua sắm hữu ích khi đi du lịch Thái Lan bạn cần nhớ</a><br>
+                            <a href="#">Lý do Nanta show của Hàn Quốc thu hút du khách suốt nhiều năm</a><br>
+                            <a href="#">Nhật ký một Travel Blogger bị “lừa” khi đi du lịch Nhật Bản</a><br>
+                            <a href="#">Du lịch Úc mùa nào đẹp nhất? Cẩm nang du lịch Úc mới nhất 2019</a>
+                        </div>
+                    </div>
+                    <div class="new-tour-bar">
+                        <div class="green-title item-title text-center border-bottom">
+                            Tour mới nhất
+                        </div>
+                        <div class="list-new-tour">
+                            <div class="new-tour-item border-bottom">
+                                <div class="new-tour-name green-title item-title">
+                                    <a href="#">TOUR ĐÀ LẠT TÌNH YÊU - 3N2D - KHỞI HÀNH THỨ 5 HÀNG TUẦN</a>
+                                </div>
+                                <div class="new-tour-price">
+                                    Giá: <span class="green-title">3,000,000đ</span>
+                                </div>
+                            </div>
+                            <div class="new-tour-item border-bottom">
+                                <div class="new-tour-name green-title item-title">
+                                    <a href="#">TOUR ĐÀ LẠT TÌNH YÊU - 3N2D - KHỞI HÀNH THỨ 5 HÀNG TUẦN</a>
+                                </div>
+                                <div class="new-tour-price">
+                                    Giá: <span class="green-title">3,000,000đ</span>
+                                </div>
+                            </div>
+                            <div class="new-tour-item border-bottom">
+                                <div class="new-tour-name green-title item-title">
+                                    <a href="#">TOUR ĐÀ LẠT TÌNH YÊU - 3N2D - KHỞI HÀNH THỨ 5 HÀNG TUẦN</a>
+                                </div>
+                                <div class="new-tour-price">
+                                    Giá: <span class="green-title">3,000,000đ</span>
+                                </div>
+                            </div>
+                            <div class="new-tour-item border-bottom">
+                                <div class="new-tour-name green-title item-title">
+                                    <a href="#">TOUR ĐÀ LẠT TÌNH YÊU - 3N2D - KHỞI HÀNH THỨ 5 HÀNG TUẦN</a>
+                                </div>
+                                <div class="new-tour-price">
+                                    Giá: <span class="green-title">3,000,000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+    </main>
+    <footer class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mg-bot20">
+                <p class="item-title green-title">Về chúng tôi</p>
+                <div class="about-us">
+                    <div class="mg-bot8"><a href="#">Giới thiệu</a></div>
+                    <div class="mg-bot8"><a href="#">Phương thức thanh toán</a></div>
+                    <div class="mg-bot8"><a href="#">Tuyển dụng</a></div>
+                    <div class="mg-bot8"><a href="#">Điều khoản thành viên</a></div>
+                    <div><a href="#">Quy chế hoạt động</a></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mg-bot20">
+                <p class="item-title green-title">Thời gian làm việc</p>
+                <div>
+                    <div class="mg-bot8">Thứ 2 - thứ 6: 8h - 17h</div>
+                    <div>Thứ 7: 8h - 12h </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mg-bot20">
+                <p class="item-title green-title">Theo dõi chúng tôi</p>
+                <div class="f-left display-flex mg-bot30">
+                    <div class="f-left">
+                        <a href="#" rel="nofollow" target="_blank" title="facebook">
+                            <img src="./images/home/footer/fb.png" alt="facebook">
+                        </a>
+                    </div>
+                    <div class="f-left mg-left">
+                        <a href="#" rel="nofollow" target="_blank" title="instagram">
+                            <img src="./images/home/footer/instagram.png" alt="instagram">
+                        </a>
+                    </div>
+                    <div class="f-left mg-left">
+                        <a href="#" rel="nofollow" target="_blank" title="twitter">
+                            <img src="./images/home/footer/tw.png" alt="twitter">
+                        </a>
+                    </div>
+                    <div class="f-left mg-left">
+                        <a href="https://www.youtube.com/channel/UCY4diIi4ZvrcZIfpLTTM11g" rel="nofollow"
+                            target="_blank" title="youtube">
+                            <img src="./images/home/footer/yt.png" alt="youtube">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mg-bot20">
+                <p class="item-title green-title">Liên hệ</p>
+                <div>
+                    <div class="address mg-bot8">190 Pasteur, Phường 6, Quận 3, Tp. HCM</div>
+                    <div class="mg-bot8"><strong>Điện thoại:</strong> (+84 28) 3822 8898</div>
+                    <div class="mg-bot8"><strong>Fax:</strong> (+84 28) 3829 9142</div>
+                    <div class="mg-bot8"><strong>Email:</strong> info@vietravel.com</div>
+                    <div><strong>Hotline:</strong> 1900 1839 (08h-23h)</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

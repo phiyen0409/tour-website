@@ -64,7 +64,7 @@ $(document).ready(function () {
 // });
 
 $(document).ready(function () {
-    $('a[href^="#"]').bind('click', function (e) {
+    $('.nav-tabs div a[href^="#"]').bind('click', function (e) {
 
         e.preventDefault(); // prevent hard jump, the default behavior
 
