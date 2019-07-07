@@ -22,7 +22,7 @@ Route::apiResources([
 
     'khachhang' => 'Admin\API\KhachHangController',
 
-    'vungmien' => 'Admin\API\VungMienController',
+    'diadiem' => 'Admin\API\DiaDiemController',
 
     'tour' => 'Admin\API\TourController',
 
@@ -34,5 +34,7 @@ Route::apiResources([
 
     'chitiettour' => 'Admin\API\ChiTietTourController',
 
+    'dattour' => 'Admin\API\DatTourController',
 
+    'lichtrinh' => 'Admin\API\LichTrinhController',
 ]);

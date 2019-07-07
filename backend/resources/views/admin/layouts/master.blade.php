@@ -174,12 +174,7 @@
                         </a>
                         <ul class="nav-main-submenu">
                             <li class="nav-main-item">
-                                <router-link to="/admin/region" class="nav-main-link">
-                                    <span class="nav-main-link-name">Vùng miền</span>
-                                </router-link>
-                            </li>
-                            <li class="nav-main-item">
-                                <router-link to="/admin/location" class="nav-main-link">
+                                <router-link to="/admin/diadiem" class="nav-main-link">
                                     <span class="nav-main-link-name">Địa điểm</span>
                                 </router-link>
                             </li>
@@ -190,22 +185,22 @@
                                 </router-link>
                             </li>
                             <li class="nav-main-item">
-                                <router-link to="/admin/tourist-route" class="nav-main-link">
+                                <router-link to="/admin/chitiettour" class="nav-main-link">
                                     <span class="nav-main-link-name">Thông tin chi tiết Tour</span>
                                 </router-link>
                             </li>
                             <li class="nav-main-item">
-                                <router-link to="/admin/tourist-route" class="nav-main-link">
+                                <router-link to="/admin/lichtrinh" class="nav-main-link">
                                     <span class="nav-main-link-name">Lịch trình</span>
                                 </router-link>
                             </li>
                             <li class="nav-main-item">
-                                <router-link to="/admin/user-client" class="nav-main-link">
+                                <router-link to="/admin/khachhang" class="nav-main-link">
                                     <span class="nav-main-link-name">Khách hàng</span>
                                 </router-link>
                             </li>
                             <li class="nav-main-item">
-                                <router-link to="/admin/reviews" class="nav-main-link">
+                                <router-link to="/admin/nhanxet" class="nav-main-link">
                                     <span class="nav-main-link-name">Nhận xét khách hàng</span>
                                 </router-link>
                             </li>
@@ -238,13 +233,13 @@
                     </li>
                     <li class="nav-main-heading">Nhân viên</li>
                     <li class="nav-main-item">
-                        <router-link to="/admin/booking-tour" class="nav-main-link">
+                        <router-link to="/admin/dattour" class="nav-main-link">
                             <i class="nav-main-link-icon si si-credit-card"></i>
                             <span class="nav-main-link-name">Đặt tour</span>
                         </router-link>
                     </li>
                     <li class="nav-main-item">
-                        <router-link to="/admin/news" class="nav-main-link">
+                        <router-link to="/admin/tintuc" class="nav-main-link">
                             <i class="nav-main-link-icon si si-note"></i>
                             <span class="nav-main-link-name">Tin tức</span>
                         </router-link>
@@ -278,7 +273,7 @@
         <!-- for example router view -->
         <router-view></router-view>
         <!-- set progressbar -->
-        <vue-progress-bar></vue-progress-bar>
+        {{-- <vue-progress-bar></vue-progress-bar> --}}
 
         <!-- Footer -->
         @include('admin.layouts.footer')
