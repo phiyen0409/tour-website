@@ -5,17 +5,20 @@ namespace App\Http\Controllers\Admin\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class BinhLuanController extends Controller
+use Models\DiaDiem;
+
+class DiaDiemController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-       $this->middleware('auth');
-    }
+    // /**
+    //  * Create a new controller instance.
+    //  *
+    //  * @return void
+    //  */
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
+
     /**
      * Display a listing of the resource.
      *
@@ -23,7 +26,7 @@ class BinhLuanController extends Controller
      */
     public function index()
     {
-        $data = BinhLuan::all();
+        $data = DiaDiem::all();
         return response()->json($data, 200);
     }
 
@@ -35,13 +38,8 @@ class BinhLuanController extends Controller
      */
     public function store(Request $request)
     {
-        $data = BinhLuan::create([
-            'nguoibinhluan' => $request['nguoibinhluan'],
-            'email' => $request['email'],
-            'matour' => $request['matour'],
-            'thoigian' => $request['thoigian'],
-            'noidung' => $request['noidung'],
-            'sosao' => $request['sosao']
+        return DiaDiem::create([
+            'tenvung' => $request['tenvung']
         ]);
     }
 
@@ -65,9 +63,9 @@ class BinhLuanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = BinhLuan::find($id);
+        $data = DiaDiem::find($id);
         $data->update($request->all());
-        return ['message' => 'update the binhluan info'];
+        return ['message' => 'update the vungmien info'];
     }
 
     /**

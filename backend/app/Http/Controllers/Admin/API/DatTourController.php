@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class BinhLuanController extends Controller
+class DatTourController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -14,7 +14,7 @@ class BinhLuanController extends Controller
      */
     public function __construct()
     {
-       $this->middleware('auth');
+       $this->middleware('auth:api');
     }
     /**
      * Display a listing of the resource.
@@ -23,10 +23,9 @@ class BinhLuanController extends Controller
      */
     public function index()
     {
-        $data = BinhLuan::all();
+        $data = VeDatTour::all();
         return response()->json($data, 200);
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -35,13 +34,15 @@ class BinhLuanController extends Controller
      */
     public function store(Request $request)
     {
-        $data = BinhLuan::create([
-            'nguoibinhluan' => $request['nguoibinhluan'],
-            'email' => $request['email'],
-            'matour' => $request['matour'],
-            'thoigian' => $request['thoigian'],
-            'noidung' => $request['noidung'],
-            'sosao' => $request['sosao']
+        return VeDatTour::create([
+            'ngaydat' => $request['ngaydat'],
+            'makh' => $request['makh'],
+            'malichtrinh' => $request['malichtrinh'],
+            'ngaykhoihanh' => $request['ngaykhoihanh'],
+            'songuoilon' => $request['songuoilon'],
+            'sotreem' => $request['sotreem'],
+            'tonggiave' => $request['tonggiave'],
+            'tinhtrang' => $request['tinhtrang'],
         ]);
     }
 
@@ -65,9 +66,9 @@ class BinhLuanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = BinhLuan::find($id);
+        $data = VeDatTour::find($id);
         $data->update($request->all());
-        return ['message' => 'update the binhluan info'];
+        return ['message' => 'update the vedattour info'];
     }
 
     /**

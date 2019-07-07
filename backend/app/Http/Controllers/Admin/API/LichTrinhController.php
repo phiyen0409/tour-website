@@ -5,17 +5,8 @@ namespace App\Http\Controllers\Admin\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class VungMienController extends Controller
+class LichTrinhController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-       $this->middleware('auth:api');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -23,7 +14,7 @@ class VungMienController extends Controller
      */
     public function index()
     {
-        $data = VungMien::all();
+        $data = VeDatTour::all();
         return response()->json($data, 200);
     }
 
@@ -35,8 +26,15 @@ class VungMienController extends Controller
      */
     public function store(Request $request)
     {
-        return VungMien::create([
-            'tenvung' => $request['tenvung']
+        return LichTrinh::create([
+            'ngaydi' => $request['ngaydi'],
+            'ngayve' => $request['ngayve'],
+            'gioxuatphat' => $request['gioxuatphat'],
+            'songuoi' => $request['songuoi'],
+            'chiphi' => $request['chiphi'],
+            'huongdanvien' => $request['huongdanvien'],
+            'matour' => $request['matour'],
+            'tinhtrang' => $request['tinhtrang'],
         ]);
     }
 
@@ -60,9 +58,9 @@ class VungMienController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = VungMien::find($id);
+        $data = LichTrinh::find($id);
         $data->update($request->all());
-        return ['message' => 'update the vungmien info'];
+        return ['message' => 'update the lichtrinh info'];
     }
 
     /**
