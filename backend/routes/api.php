@@ -16,3 +16,23 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResources([
+    'nhanvien' => 'Admin\API\NhanVienController',
+
+    'khachhang' => 'Admin\API\KhachHangController',
+
+    'vungmien' => 'Admin\API\VungMienController',
+
+    'tour' => 'Admin\API\TourController',
+
+    'anhtour' => 'Admin\API\AnhTourController',
+
+    'binhluan' => 'Admin\API\BinhLuanController',
+
+    'tintuc' => 'Admin\API\TinTucController',
+
+    'chitiettour' => 'Admin\API\ChiTietTourController',
+
+
+]);
