@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 07, 2019 lúc 10:39 AM
+-- Thời gian đã tạo: Th7 07, 2019 lúc 12:48 PM
 -- Phiên bản máy phục vụ: 10.3.15-MariaDB
 -- Phiên bản PHP: 7.3.6
 
@@ -69,6 +69,20 @@ CREATE TABLE `chitiettour` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `diadiem`
+--
+
+CREATE TABLE `diadiem` (
+  `madiadiem` int(11) NOT NULL,
+  `tendiadiem` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `vungmien` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -168,7 +182,9 @@ CREATE TABLE `password_resets` (
 CREATE TABLE `tintuc` (
   `matintuc` int(11) NOT NULL,
   `tentintuc` varchar(200) NOT NULL,
-  `noidungtintuc` text NOT NULL,
+  `motatintuc` varchar(255) NOT NULL,
+  `anhtintuc` varchar(255) NOT NULL,
+  `noidungtintuc` longtext NOT NULL,
   `ngaydang` datetime NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -183,13 +199,13 @@ CREATE TABLE `tintuc` (
 CREATE TABLE `tour` (
   `matour` int(11) NOT NULL,
   `tentour` varchar(200) NOT NULL,
+  `madiadiem` int(11) NOT NULL,
   `songay` int(11) NOT NULL,
   `sodem` int(11) NOT NULL,
-  `diadiem` varchar(200) NOT NULL,
   `gioithieu` text NOT NULL,
   `giave` double NOT NULL,
-  `mavung` int(11) NOT NULL,
   `socho` int(11) NOT NULL,
+  `anhbia` varchar(255) NOT NULL,
   `tinhtrang` tinyint(4) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -239,19 +255,6 @@ CREATE TABLE `vedattour` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `vungmien`
---
-
-CREATE TABLE `vungmien` (
-  `mavung` int(11) NOT NULL,
-  `tenvung` varchar(200) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Chỉ mục cho các bảng đã đổ
 --
@@ -276,6 +279,12 @@ ALTER TABLE `binhluan`
 ALTER TABLE `chitiettour`
   ADD PRIMARY KEY (`machitiettour`),
   ADD KEY `fk_tour_chitiet` (`matour`);
+
+--
+-- Chỉ mục cho bảng `diadiem`
+--
+ALTER TABLE `diadiem`
+  ADD PRIMARY KEY (`madiadiem`);
 
 --
 -- Chỉ mục cho bảng `khachhang`
@@ -320,7 +329,7 @@ ALTER TABLE `tintuc`
 --
 ALTER TABLE `tour`
   ADD PRIMARY KEY (`matour`),
-  ADD KEY `fk_vung_tour` (`mavung`);
+  ADD KEY `madiadiem` (`madiadiem`);
 
 --
 -- Chỉ mục cho bảng `users`
@@ -337,12 +346,6 @@ ALTER TABLE `vedattour`
   ADD PRIMARY KEY (`mave`),
   ADD KEY `fk_kh_dattour` (`makh`),
   ADD KEY `fk_lichtrinh_dattour` (`malichtrinh`);
-
---
--- Chỉ mục cho bảng `vungmien`
---
-ALTER TABLE `vungmien`
-  ADD PRIMARY KEY (`mavung`);
 
 --
 -- AUTO_INCREMENT cho các bảng đã đổ
@@ -365,6 +368,12 @@ ALTER TABLE `binhluan`
 --
 ALTER TABLE `chitiettour`
   MODIFY `machitiettour` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `diadiem`
+--
+ALTER TABLE `diadiem`
+  MODIFY `madiadiem` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `khachhang`
@@ -415,12 +424,6 @@ ALTER TABLE `vedattour`
   MODIFY `mave` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `vungmien`
---
-ALTER TABLE `vungmien`
-  MODIFY `mavung` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- Các ràng buộc cho các bảng đã đổ
 --
 
@@ -453,7 +456,7 @@ ALTER TABLE `lichtrinh`
 -- Các ràng buộc cho bảng `tour`
 --
 ALTER TABLE `tour`
-  ADD CONSTRAINT `fk_vung_tour` FOREIGN KEY (`mavung`) REFERENCES `vungmien` (`mavung`);
+  ADD CONSTRAINT `tour_ibfk_1` FOREIGN KEY (`madiadiem`) REFERENCES `diadiem` (`madiadiem`);
 
 --
 -- Các ràng buộc cho bảng `users`
